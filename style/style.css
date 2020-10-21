@@ -1,0 +1,115 @@
+body {
+    background-image: url(../ressources/unnamed.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Karla', sans-serif;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+#entier {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "haut haut"
+    "gauche droite";
+    
+    
+}
+
+#haut {
+    grid-area: haut;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px 8px 0px 0px;
+    padding: 35px;
+    
+}
+
+#gauche {
+    grid-area: gauche;
+    background-color: rgb(35, 149, 147);
+    border-radius: 0px 0px 0px 8px;
+    padding: 35px;
+}
+
+#droite {
+    grid-area: droite;
+    background-color:rgb(152, 166, 189);
+    border-radius: 0px 0px 8px 0px;
+    padding: 35px;
+    padding-right: 40px;
+}
+
+h1 {
+    font-weight: 700;
+    color: rgb(35, 149, 147);
+}
+
+#haut h2 {
+    font-weight: 700;
+    color: rgb(192, 223, 52);
+}
+
+#haut p {
+    font-weight: 400;
+    color: rgb(152, 166, 189);
+}
+
+#gauche h2 {
+    font-weight: 700;
+    color: rgb(229, 239, 245);
+    
+}
+strong {
+    font-size: 35px;
+}
+
+#gauche p {
+    font-weight: 400;
+    color: rgb(229, 239, 245);
+}
+
+span {
+    background-color: rgb(192, 223, 52);
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    top: 25px;
+}
+
+#droite h2 {
+    font-weight: 700;
+    color: rgb(229, 239, 245);
+}
+
+#droite p {
+    font-weight: 400;
+    color: rgb(229, 239, 245);
+}
+
+@media (max-width:1440px){
+    #entier {
+        display: grid;
+        grid-template-columns: (1fr);
+        grid-template-areas: 
+        "haut"
+        "gauche"
+        "droite";
+        
+    }
+    #droite {
+        border-radius: 0px 0px 8px 8px;
+    }
+    #gauche {
+        border-radius: 0px;
+    }
+    span {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
